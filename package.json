@@ -1,0 +1,23 @@
+{
+  "name": "serverless-lambda-python",
+  "version": "1.0.0",
+  "description": "Simple example of lambda python application using serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvo1404/serverless-lambda-python.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salvo1404/serverless-lambda-python/issues"
+  },
+  "homepage": "https://github.com/salvo1404/serverless-lambda-python#readme",
+  "dependencies": {
+    "serverless-python-requirements": "^5.0.1"
+  }
+}

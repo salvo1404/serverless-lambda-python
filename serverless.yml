@@ -25,8 +25,8 @@ provider:
   runtime: python3.8
 
 # you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  stage: dev
+  region: ap-southeast-2
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -49,17 +49,19 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
-#  include:
-#    - include-me.py
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.py
-#    - exclude-me-dir/**
+package:
+ exclude:
+   - node_modules/**
+   - venv/**
 
 functions:
   hello:
-    handler: handler.hello
+    handler: functions/handler.hello
+    package:
+      include:
+        - functions/handler.py
+      exclude:
+        - functions/**
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -99,6 +101,13 @@ functions:
 #    Define function environment variables here
 #    environment:
 #      variable2: value2
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
 
 # you can add CloudFormation resource templates here
 #resources:
