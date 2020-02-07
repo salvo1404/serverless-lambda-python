@@ -52,7 +52,13 @@ provider:
 package:
  exclude:
    - node_modules/**
+   - build/**
+   - package.json
+   - package-lock.json
+   - requirements.txt
+   - .serverless/**
    - venv/**
+   - __pycache__/**
 
 functions:
   hello:

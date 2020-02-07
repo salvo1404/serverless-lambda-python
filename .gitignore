@@ -17,7 +17,6 @@ var/
 *.egg
 .vscode
 __pycache__
-venv/**
 node_modules/
 **/__pycache__/**
 
